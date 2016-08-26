@@ -53,8 +53,10 @@ $(function() {
   $("#blanks form").submit(function(event) {
     event.preventDefault();
     var orderName = $("input#customer-name").val();
-    var newPizza = new Pizza(orderName)
+    var pizzaSize = $("#pizza-size").val();
+    var newPizza = new Pizza(orderName, pizzaSize);
     console.log(newPizza);
     $("#order-name").text(newPizza.name);
+    $(".pizza-size-output").text(newPizza.size.);
   })
 })
