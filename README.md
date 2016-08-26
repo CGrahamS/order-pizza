@@ -39,7 +39,7 @@ _This webpage will allow a user to order a pizza with a variety of toppings. The
 * _Clone this repository to your desktop_
 * _Open index.html in the browser of your choosing_
 
-_You must host this webpage locally_
+_You can host this webpage locally OR you can click [HERE](https://cgrahams.github.io/order-pizza/index.html)._
 
 ## Known Bugs
 
