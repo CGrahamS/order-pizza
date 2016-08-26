@@ -10,15 +10,15 @@ _This webpage will allow a user to order a pizza with a variety of toppings. The
 
 ## Specs
 
-###### 1. Program tracks size of pizza order.
+###### 1. Program tracks size of pizza order. PASSED
 * _Example Input: large_
 * _Example Output: large_
 
-###### 2. Program tracks a single topping.
+###### 2. Program tracks a single topping. PASSED
 * _Example Input: [large] [pepperoni]_
 * _Example Output: [large] [pepperoni]_
 
-###### 3. Program tracks multiple toppings.
+###### 3. Program tracks multiple toppings. PASSED
 * _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: [large] [pepperoni, black olives]_
 
