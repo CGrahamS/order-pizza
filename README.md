@@ -1,18 +1,38 @@
-# _{Application Name}_
+# _Order Pizza_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Epicodus Week 4, Independent Project, 8-26-16_
 
 #### By _**Caleb Stevenson**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This webpage will allow a user to order a pizza with a variety of toppings. The webpage will then calculate a price based off of the user's selections_
 
 ## Specs
 
-###### Program will ---
-* _Example Input:_
-* _Example Output:_
+###### 1. Program tracks size of pizza order.
+* _Example Input: large_
+* _Example Output: large_
+
+###### 2. Program calculates price for size of pizza.
+* _Example Input: large_
+* _Example Output: 12_
+
+###### 3. Program tracks a single topping.
+* _Example Input: pepperoni_
+* _Example Output: pepperoni_
+
+###### 4. Program calculates price for a single topping.
+* _Example Input: pepperoni_
+* _Example Output: 4_
+
+###### 5. Program tracks multiple toppings.
+* _Example Input: pepperoni, black olives_
+* _Example Output: pepperoni, black olives_
+
+###### 6. Program calculates price for multiple toppings.
+* _Example Input: pepperoni, black olives_
+* _Example Output: 7_
 
 ## Setup/Installation Requirements
 
