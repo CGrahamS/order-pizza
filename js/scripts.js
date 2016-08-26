@@ -1,4 +1,7 @@
-function Pizza(size) {
+//Back End
+
+function Pizza(name, size) {
+  this.name = name;
   this.size = size;
   this.toppings = []
   this.price = 0;
@@ -43,3 +46,9 @@ Pizza.prototype.priceCalculator = function() {
     return this.price;
   }
 }
+
+// Front End
+
+$(function() {
+  $()
+})
