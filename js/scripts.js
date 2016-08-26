@@ -50,5 +50,11 @@ Pizza.prototype.priceCalculator = function() {
 // Front End
 
 $(function() {
-  $()
+  $("#blanks form").submit(function(event) {
+    event.preventDefault();
+    var orderName = $("input#customer-name").val();
+    var newPizza = new Pizza(orderName)
+    console.log(newPizza);
+    $("#order-name").text(newPizza.name);
+  })
 })
