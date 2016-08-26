@@ -13,7 +13,7 @@ Pizza.prototype.priceCalculator = function() {
       this.price += 4;
     }
     if (this.toppings.includes("black olives") === true) {
-      this.price += 4;
+      this.price += 3;
     }
     if (this.toppings.includes("sausage") === true) {
       this.price += 4;
@@ -25,7 +25,7 @@ Pizza.prototype.priceCalculator = function() {
       this.price += 3;
     }
     if (this.toppings.includes("black olives") === true) {
-      this.price += 3;
+      this.price += 2;
     }
     if (this.toppings.includes("sausage") === true) {
       this.price += 3;
@@ -37,7 +37,7 @@ Pizza.prototype.priceCalculator = function() {
       this.price += 2;
     }
     if (this.toppings.includes("black olives") === true) {
-      this.price += 2;
+      this.price += 1;
     }
     if (this.toppings.includes("sausage") === true) {
       this.price += 2;
@@ -52,11 +52,9 @@ function resetFields() {
   $("#pizza-size").val("size");
   $('input[type=checkbox]').each(function() {
         this.checked = false;
-});
+  });
 }
-
 // Front End
-
 $(function() {
   $("#blanks form").submit(function(event) {
     event.preventDefault();
@@ -64,31 +62,50 @@ $(function() {
     var pizzaSize = $("#pizza-size").val();
     var pizzaToppings = $("input:checkbox[name=toppings]:checked");
     var newPizza = new Pizza(orderName, pizzaSize);
-    console.log(newPizza);
-    $.each($(pizzaToppings), function() {
-        newPizza.toppings.push($(this).val());
-    });
-    console.log(newPizza.toppings);
-    newPizza.priceCalculator();
-    console.log(newPizza.price);
-    console.log(newPizza);
-    $("#order-name").text(newPizza.name);
-    $(".pizza-size-output").text(newPizza.size);
-    if (newPizza.toppings.length === 1) {
-      $(".pizza-toppings-output1").text(newPizza.toppings[0]);
-      $(".pizza-toppings-output2").empty();
-      $(".pizza-toppings-output3").empty();
-    } else if (newPizza.toppings.length === 2) {
-      $(".pizza-toppings-output1").text(newPizza.toppings[0]);
-      $(".pizza-toppings-output2").text(" and " + newPizza.toppings[1]);
-      $(".pizza-toppings-output3").empty();
-    } else if (newPizza.toppings.length === 3) {
-      $(".pizza-toppings-output1").text(newPizza.toppings[0]);
-      $(".pizza-toppings-output2").text(" " + "and" + " " + newPizza.toppings[1]);
-      $(".pizza-toppings-output3").text("," + " " + newPizza.toppings[2]);
+    if (orderName) {
+      if (pizzaSize) {
+        if (pizzaToppings) {
+          /*
+          I struggled with pushing the check box values to an array. Found the code snippet below and got it to work, but I'm not entirely sure how it works with the $. at the beginning.
+          */
+          $.each($(pizzaToppings), function() {
+              newPizza.toppings.push($(this).val());
+          });
+          newPizza.priceCalculator();
+          console.log("after price" + newPizza);
+          $("#order-name").text(newPizza.name);
+          $(".pizza-size-output").text(newPizza.size);
+          if (newPizza.toppings.length === 0) {
+            $(".pizza-toppings-output1").text("cheese pizza");
+            $(".pizza-toppings-output2").empty();
+            $(".pizza-toppings-output3").empty();
+          }
+          if (newPizza.toppings.length === 1) {
+            $(".pizza-toppings-output1").text("pizza with" + " " + newPizza.toppings[0]);
+            $(".pizza-toppings-output2").empty();
+            $(".pizza-toppings-output3").empty();
+          } else if (newPizza.toppings.length === 2) {
+            $(".pizza-toppings-output1").text("pizza with" + " " + newPizza.toppings[0]);
+            $(".pizza-toppings-output2").text(" " + "and" + " " + newPizza.toppings[1]);
+            $(".pizza-toppings-output3").empty();
+          } else if (newPizza.toppings.length === 3) {
+            $(".pizza-toppings-output1").text("pizza with" + " " + newPizza.toppings[0]);
+            $(".pizza-toppings-output2").text(" " + "and" + " " + newPizza.toppings[1]);
+            $(".pizza-toppings-output3").text("," + " " + newPizza.toppings[2]);
+          }
+          $(".pizza-price-output").text(newPizza.price);
+          $("#output").show();
+          $("#size-alert").hide();
+          $("#name-alert").hide();
+          resetFields();
+        }
+      } else {
+        $("#size-alert").show();
+        $("#name-alert").hide();
+      }
+    } else {
+      $("#name-alert").show();
+      $("#size-alert").hide();
     }
-    $(".pizza-price-output").text(newPizza.price);
-    $("#output").show();
-    resetFields();
   })
 })
