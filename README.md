@@ -14,25 +14,25 @@ _This webpage will allow a user to order a pizza with a variety of toppings. The
 * _Example Input: large_
 * _Example Output: large_
 
-###### 2. Program calculates price for size of pizza.
-* _Example Input: large_
+###### 2. Program tracks a single topping.
+* _Example Input: [large] [pepperoni]_
+* _Example Output: [large] [pepperoni]_
+
+###### 3. Program tracks multiple toppings.
+* _Example Input: [large] [pepperoni, black olives]_
+* _Example Output: [large] [pepperoni, black olives]_
+
+###### 4. Program calculates price for size of pizza.
+* _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: 12_
 
-###### 3. Program tracks a single topping.
-* _Example Input: pepperoni_
-* _Example Output: pepperoni_
-
-###### 4. Program calculates price for a single topping.
-* _Example Input: pepperoni_
-* _Example Output: 4_
-
-###### 5. Program tracks multiple toppings.
-* _Example Input: pepperoni, black olives_
-* _Example Output: pepperoni, black olives_
+###### 5. Program calculates price for a single topping.
+* _Example Input: [large] [pepperoni, black olives]_
+* _Example Output: 16_
 
 ###### 6. Program calculates price for multiple toppings.
-* _Example Input: pepperoni, black olives_
-* _Example Output: 7_
+* _Example Input: [large] [pepperoni, black olives]_
+* _Example Output: 19_
 
 ## Setup/Installation Requirements
 
