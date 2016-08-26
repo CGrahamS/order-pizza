@@ -9,6 +9,9 @@ Pizza.prototype.priceCalculator = function() {
     if (this.toppings.includes("pepperoni") === true) {
       this.price += 4;
     }
+    if (this.toppings.includes("black olives") === true) {
+      this.price += 4;
+    }
     this.price += 12;
     return this.price;
   } else if (this.size === "small") {

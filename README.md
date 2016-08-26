@@ -30,7 +30,7 @@ _This webpage will allow a user to order a pizza with a variety of toppings. The
 * _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: 16_
 
-###### 6. Program calculates price for multiple toppings.
+###### 6. Program calculates price for multiple toppings. PASSED
 * _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: 19_
 
