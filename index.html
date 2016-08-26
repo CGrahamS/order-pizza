@@ -31,17 +31,17 @@
               <label for="toppings">Choose your toppings:</label>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="pepperoni">Pepperoni
+                  <input type="checkbox" name="toppings" value="pepperoni">Pepperoni
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="sausage">Sausage
+                  <input type="checkbox" name="toppings" value="sausage">Sausage
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="black olives">Black Olives
+                  <input type="checkbox" name="toppings" value="black olives">Black Olives
                 </label>
               </div>
               <button type="submit" class="btn btn-success">ORDER PIZZA!</button>
@@ -49,8 +49,8 @@
           </div>
           <div id="output">
             <h4><span id="order-name"></span>'s order:</h4>
-            <p>1 <span class="pizza-size-output"></span> pizza, with <span class="pizza-toppings"></span>.</p>
-            <p><span class="pizza-cost"></span></p>
+            <p>1 <span class="pizza-size-output"></span> pizza with <span class="pizza-toppings-output1"></span><span class="pizza-toppings-output3"></span><span class="pizza-toppings-output2"></span>.</p>
+            <p>Total: $<span class="pizza-price-output"></span></p>
           </div>
         </div>
       </div>

@@ -56,7 +56,26 @@ $(function() {
     var pizzaSize = $("#pizza-size").val();
     var newPizza = new Pizza(orderName, pizzaSize);
     console.log(newPizza);
+    $.each($("input:checkbox[name=toppings]:checked"), function() {
+        newPizza.toppings.push($(this).val());
+    });
+    console.log(newPizza.toppings);
+    newPizza.priceCalculator();
+    console.log(newPizza.price);
+    console.log(newPizza);
     $("#order-name").text(newPizza.name);
-    $(".pizza-size-output").text(newPizza.size.);
+    $(".pizza-size-output").text(newPizza.size);
+    if (newPizza.toppings.length === 1) {
+      $(".pizza-toppings-output1").text(newPizza.toppings[0]);
+    } else if (newPizza.toppings.length === 2) {
+      $(".pizza-toppings-output1").text(newPizza.toppings[0]);
+      $(".pizza-toppings-output2").text(" and " + newPizza.toppings[1]);
+    } else if (newPizza.toppings.length === 3) {
+      $(".pizza-toppings-output1").text(newPizza.toppings[0]);
+      $(".pizza-toppings-output2").text(" and " + newPizza.toppings[1]);
+      $(".pizza-toppings-output3").text(", " + newPizza.toppings[2]);
+    }
+    $(".pizza-price-output").text(newPizza.price);
+    $("#output").show();
   })
 })
