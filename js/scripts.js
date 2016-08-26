@@ -1,5 +1,5 @@
 //Back End
-
+// Ask Perry about refactoring
 function Pizza(name, size) {
   this.name = name;
   this.size = size;
@@ -47,6 +47,14 @@ Pizza.prototype.priceCalculator = function() {
   }
 }
 
+function resetFields() {
+  $("input#customer-name").val("")
+  $("#pizza-size").val("size");
+  $('input[type=checkbox]').each(function() {
+        this.checked = false;
+});
+}
+
 // Front End
 
 $(function() {
@@ -54,9 +62,10 @@ $(function() {
     event.preventDefault();
     var orderName = $("input#customer-name").val();
     var pizzaSize = $("#pizza-size").val();
+    var pizzaToppings = $("input:checkbox[name=toppings]:checked");
     var newPizza = new Pizza(orderName, pizzaSize);
     console.log(newPizza);
-    $.each($("input:checkbox[name=toppings]:checked"), function() {
+    $.each($(pizzaToppings), function() {
         newPizza.toppings.push($(this).val());
     });
     console.log(newPizza.toppings);
@@ -67,15 +76,19 @@ $(function() {
     $(".pizza-size-output").text(newPizza.size);
     if (newPizza.toppings.length === 1) {
       $(".pizza-toppings-output1").text(newPizza.toppings[0]);
+      $(".pizza-toppings-output2").empty();
+      $(".pizza-toppings-output3").empty();
     } else if (newPizza.toppings.length === 2) {
       $(".pizza-toppings-output1").text(newPizza.toppings[0]);
       $(".pizza-toppings-output2").text(" and " + newPizza.toppings[1]);
+      $(".pizza-toppings-output3").empty();
     } else if (newPizza.toppings.length === 3) {
       $(".pizza-toppings-output1").text(newPizza.toppings[0]);
-      $(".pizza-toppings-output2").text(" and " + newPizza.toppings[1]);
-      $(".pizza-toppings-output3").text(", " + newPizza.toppings[2]);
+      $(".pizza-toppings-output2").text(" " + "and" + " " + newPizza.toppings[1]);
+      $(".pizza-toppings-output3").text("," + " " + newPizza.toppings[2]);
     }
     $(".pizza-price-output").text(newPizza.price);
     $("#output").show();
+    resetFields();
   })
 })
