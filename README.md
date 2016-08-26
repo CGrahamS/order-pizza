@@ -22,11 +22,11 @@ _This webpage will allow a user to order a pizza with a variety of toppings. The
 * _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: [large] [pepperoni, black olives]_
 
-###### 4. Program calculates price for size of pizza.
+###### 4. Program calculates price for size of pizza. PASSED
 * _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: 12_
 
-###### 5. Program calculates price for a single topping.
+###### 5. Program calculates price for a single topping. PASSED
 * _Example Input: [large] [pepperoni, black olives]_
 * _Example Output: 16_
 
