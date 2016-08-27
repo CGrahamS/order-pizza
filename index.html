@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
@@ -8,20 +9,21 @@
     <title>Antonio's</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="page-header">Antonio's</h1>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-md-offset-4">
+        <div id="header" class="col-md-12">
+          <h1>Antonio's</h1>
+        </div>
+        <div id="order-form" class="col-md-4 col-md-offset-4">
           <h3><strong>Welcome to Antonio's!</strong></h3>
           <h4>Place your order below!</h4>
           <div id="blanks">
             <form>
               <div class="form-group">
-                <label for="customer-name">Enter the name for the order here:</label>
                 <div id="name-alert" class="my-alert bg-danger">
                   <p><strong>Don't forget to enter a name for your order!</strong></p>
                 </div>
-                <input id="customer-name" type="text" class="form-control">
+                <input id="customer-name" type="text" class="form-control" placeholder="Name for Order">
               </div>
               <div class="form-group">
                 <div id="size-alert" class="my-alert bg-danger">
@@ -50,7 +52,7 @@
                   <input type="checkbox" name="toppings" value="sausage">Sausage (Large: $4; Medium: $3; Small: $2)
                 </label>
               </div>
-              <button type="submit" class="btn btn-success">ORDER PIZZA!</button>
+              <button type="submit" class="btn">ORDER PIZZA!</button>
             </form>
           </div>
         </div>

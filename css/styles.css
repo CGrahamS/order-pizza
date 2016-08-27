@@ -1,10 +1,22 @@
-#header {
-  background-image: url(../img/pizza.jpg);
-  background-size: contain;
+body {
+  font-family: 'Quattrocento', serif;
 }
 
-.page-header {
+#header {
   text-align: center;
+  background-color: #FF6347;
+  color: white;
+  text-transform: uppercase;
+}
+
+#order-form h3,
+#order-form h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#blanks {
+  margin-top: 5%;
 }
 
 #customer-name,
@@ -13,11 +25,19 @@
   margin-right: 2%;
 }
 
+.btn {
+  margin: 5% 0 5% 25%;
+  background-color: #FF6347;
+  color: white;
+}
+
 .my-alert {
-  max-width: 50%;
+  background-color: #FF6347;
+  color: white;
+  max-width: 80%;
   margin-bottom: 2%;
-  padding: 2% 2% 1% 4%;
-  font-size: .8em;
+  padding: 3% 2% 1% 6%;
+  font-size: .95em;
   border-radius: 5px;
 }
 
