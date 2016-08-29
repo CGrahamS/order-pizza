@@ -1,5 +1,5 @@
 //Back End
-// Ask Perry about refactoring
+// Ask about refactoring
 function Pizza(name, size) {
   this.name = name;
   this.size = size;
@@ -72,7 +72,6 @@ $(function() {
               newPizza.toppings.push($(this).val());
           });
           newPizza.priceCalculator();
-          console.log("after price" + newPizza);
           $("#order-name").text(newPizza.name);
           $(".pizza-size-output").text(newPizza.size);
           if (newPizza.toppings.length === 0) {

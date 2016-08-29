@@ -4,7 +4,7 @@ body {
 
 #header {
   text-align: center;
-  background-color: #FF6347;
+  background-color: #991700;
   color: white;
   text-transform: uppercase;
 }
@@ -27,12 +27,12 @@ body {
 
 .btn {
   margin: 5% 0 5% 25%;
-  background-color: #FF6347;
+  background-color: #991700;
   color: white;
 }
 
 .my-alert {
-  background-color: #FF6347;
+  background-color: #991700;
   color: white;
   max-width: 80%;
   margin-bottom: 2%;
